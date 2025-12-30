@@ -11,6 +11,9 @@ export default function Hero() {
           src={heroImage}
           alt="Wolf Academy Training Facility"
           className="w-full h-full object-cover"
+          // @ts-ignore
+          fetchpriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/80" />
