@@ -1,20 +1,43 @@
 import { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import galleryKids from '@/assets/gallery-kids.jpg';
-import galleryBags from '@/assets/gallery-bags.jpg';
-import galleryStriking from '@/assets/gallery-striking.jpg';
-import galleryWeights from '@/assets/gallery-weights.jpg';
-import galleryBjj from '@/assets/gallery-bjj.jpg';
-import heroGym from '@/assets/hero-gym.jpg';
+
+import bagsAndDummies from '../assets/bags-and-dummies.jpg';
+import bags from '../assets/bags.jpg';
+import barbellsPlates from '../assets/barbells-plates.jpg';
+import basketball from '../assets/basketball.jpg';
+import calithenicsArea from '../assets/calithenics-area.jpg';
+import coachStudent from '../assets/coach-student.jpeg';
+import coachStudent2 from '../assets/coach-student2.jpeg';
+import cycles from '../assets/cycles.jpg';
+import dumbles from '../assets/dumbles.jpg';
+import heroGym from '../assets/hero-gym.jpg';
+import mirrorArea from '../assets/mirror-area.jpg';
+import moonboard from '../assets/moonboard.jpg';
+import runningTrack from '../assets/running-track.jpg';
+import seatingArea from '../assets/seating-area.jpg';
+import sparring from '../assets/sparring.jpeg';
+import tt from '../assets/tt.jpg';
+import wholeGym from '../assets/whole-gym.jpg';
 
 const galleryImages = [
-  { src: heroGym, alt: 'Wolf Academy MMA Cage', size: 'large' },
-  { src: galleryBags, alt: 'Heavy Bag Training Area', size: 'tall' },
-  { src: galleryKids, alt: 'Kids MMA Training', size: 'wide' },
-  { src: galleryStriking, alt: 'Adult Striking Session', size: 'normal' },
-  { src: galleryWeights, alt: 'Strength & Conditioning Equipment', size: 'normal' },
-  { src: galleryBjj, alt: 'BJJ Grappling Training', size: 'wide' },
+  { src: wholeGym, alt: 'State of the art Facility', size: 'large' },
+  { src: sparring, alt: 'Professional Sparring Sessions', size: 'tall' },
+  { src: heroGym, alt: 'Premium Equipment', size: 'wide' },
+  { src: coachStudent, alt: 'Personalized Coaching', size: 'standard' },
+  { src: moonboard, alt: 'Moonboard Climbing', size: 'wide' },
+  { src: runningTrack, alt: 'Indoor Running Track', size: 'wide' },
+  { src: coachStudent2, alt: 'Expert Guidance', size: 'tall' },
+  { src: mirrorArea, alt: 'Form Check Area', size: 'standard' },
+  { src: calithenicsArea, alt: 'Calisthenics Zone', size: 'standard' },
+  { src: bags, alt: 'Heavy Bags', size: 'standard' },
+  { src: bagsAndDummies, alt: 'Combat Training Area', size: 'wide' },
+  { src: barbellsPlates, alt: 'Free Weights', size: 'standard' },
+  { src: dumbles, alt: 'Dumbbell Rack', size: 'standard' },
+  { src: cycles, alt: 'Cardio Section', size: 'standard' },
+  { src: seatingArea, alt: 'Lounge Area', size: 'standard' },
+  { src: basketball, alt: 'Basketball Court', size: 'standard' },
+  { src: tt, alt: 'Table Tennis', size: 'standard' },
 ];
 
 export default function Gallery() {
@@ -40,18 +63,17 @@ export default function Gallery() {
         </motion.div>
 
         {/* Masonry Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 grid-flow-dense">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className={`relative overflow-hidden rounded-xl cursor-pointer group ${
-                image.size === 'large' ? 'col-span-2 row-span-2' :
+              className={`relative overflow-hidden rounded-xl cursor-pointer group ${image.size === 'large' ? 'col-span-2 row-span-2' :
                 image.size === 'tall' ? 'row-span-2' :
-                image.size === 'wide' ? 'col-span-2' : ''
-              }`}
+                  image.size === 'wide' ? 'col-span-2' : ''
+                }`}
               onClick={() => setSelectedImage(image.src)}
             >
               <img
@@ -59,10 +81,10 @@ export default function Gallery() {
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              
+
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
+
               {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <p className="font-heading text-sm tracking-wider text-foreground">{image.alt}</p>

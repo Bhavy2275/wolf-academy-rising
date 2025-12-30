@@ -4,28 +4,30 @@ import { useRef, useState } from 'react';
 
 const scheduleData = {
   'Ages 3-7': [
-    { day: 'Mon', time: '4:00 PM', class: 'Little Warriors (MMA Basics)' },
-    { day: 'Wed', time: '4:00 PM', class: 'Little Warriors (MMA Basics)' },
-    { day: 'Sat', time: '10:00 AM', class: 'Kids Fun Fitness' },
+    { day: 'Mon', time: '3:45 PM - 4:45 PM', class: 'Little Warriors (MMA Basics)' },
+    { day: 'Wed', time: '3:45 PM - 4:45 PM', class: 'Little Warriors (MMA Basics)' },
+    { day: 'Fri', time: '3:45 PM - 4:45 PM', class: 'Little Warriors (Games & Drills)' },
+    { day: 'Sat', time: '3:45 PM - 4:45 PM', class: 'Kids Fun Fitness' },
   ],
   'Ages 7-13': [
-    { day: 'Mon', time: '5:00 PM', class: 'Kids MMA' },
-    { day: 'Tue', time: '5:00 PM', class: 'Kids Boxing' },
-    { day: 'Wed', time: '5:00 PM', class: 'Kids MMA' },
-    { day: 'Thu', time: '5:00 PM', class: 'Kids BJJ' },
-    { day: 'Fri', time: '5:00 PM', class: 'Kids Muay Thai' },
-    { day: 'Sat', time: '11:00 AM', class: 'Kids All Styles' },
+    { day: 'Mon', time: '5:00 PM - 6:00 PM', class: 'Kids MMA' },
+    { day: 'Tue', time: '5:00 PM - 6:00 PM', class: 'Kids Boxing' },
+    { day: 'Wed', time: '5:00 PM - 6:00 PM', class: 'Kids MMA' },
+    { day: 'Thu', time: '5:00 PM - 6:00 PM', class: 'Kids BJJ' },
+    { day: 'Fri', time: '5:00 PM - 6:00 PM', class: 'Kids Muay Thai' },
+    { day: 'Sat', time: '5:00 PM - 6:00 PM', class: 'Kids All Styles' },
   ],
   'Adults': [
-    { day: 'Mon', time: '6:30 AM', class: 'Morning Striking' },
-    { day: 'Mon', time: '7:00 PM', class: 'MMA' },
-    { day: 'Tue', time: '7:00 PM', class: 'Boxing' },
-    { day: 'Wed', time: '6:30 AM', class: 'BJJ Fundamentals' },
-    { day: 'Wed', time: '7:00 PM', class: 'Muay Thai' },
-    { day: 'Thu', time: '7:00 PM', class: 'BJJ' },
-    { day: 'Fri', time: '7:00 PM', class: 'Open Mat / Sparring' },
-    { day: 'Sat', time: '9:00 AM', class: 'S&C / Conditioning' },
-    { day: 'Sun', time: '10:00 AM', class: 'Open Training' },
+    { day: 'Mon', time: '7:00 PM - 8:30 PM', class: 'MMA' },
+    { day: 'Mon', time: '8:30 PM - 10:00 PM', class: 'Grappling / BJJ' },
+    { day: 'Tue', time: '7:00 PM - 8:30 PM', class: 'Boxing' },
+    { day: 'Tue', time: '8:30 PM - 10:00 PM', class: 'Muay Thai' },
+    { day: 'Wed', time: '7:00 PM - 8:30 PM', class: 'Muay Thai' },
+    { day: 'Wed', time: '8:30 PM - 10:00 PM', class: 'MMA Striking' },
+    { day: 'Thu', time: '7:00 PM - 8:30 PM', class: 'BJJ' },
+    { day: 'Thu', time: '8:30 PM - 10:00 PM', class: 'Boxing' },
+    { day: 'Fri', time: '7:00 PM - 10:00 PM', class: 'Open Mat / Sparring' },
+    { day: 'Sat', time: '7:00 PM - 10:00 PM', class: 'S&C / Conditioning' },
   ],
 };
 
@@ -64,11 +66,10 @@ export default function Schedule() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-8 py-4 font-heading text-sm tracking-widest rounded-lg transition-all duration-300 ${
-                activeTab === tab
-                  ? 'bg-gradient-gold text-primary-foreground glow-gold'
-                  : 'bg-surface-elevated border border-border text-muted-foreground hover:border-primary hover:text-primary'
-              }`}
+              className={`px-8 py-4 font-heading text-sm tracking-widest rounded-lg transition-all duration-300 ${activeTab === tab
+                ? 'bg-gradient-gold text-primary-foreground glow-gold'
+                : 'bg-surface-elevated border border-border text-muted-foreground hover:border-primary hover:text-primary'
+                }`}
             >
               {tab.toUpperCase()}
             </button>

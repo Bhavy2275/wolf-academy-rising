@@ -10,7 +10,7 @@ export default function Contact() {
   const { toast } = useToast();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -24,26 +24,52 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // TODO: Replace with your actual Formspree Form ID
+  const FORMSPREE_ID = 'xdaovpjz';
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Create mailto link
-    const subject = encodeURIComponent(`Wolf Academy Inquiry - ${formData.discipline}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nPhone: ${formData.phone}\nDiscipline: ${formData.discipline}\nInquiry Type: ${formData.inquiry}\n\nMessage:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:wolfacademyindia@gmail.com?subject=${subject}&body=${body}`;
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Email client opened!",
-        description: "Complete sending your inquiry through your email app.",
+    if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+      setTimeout(() => {
+        setIsSubmitting(false);
+        toast({
+          title: "Configuration Needed",
+          description: "Please set your Formspree ID in the Contact component code to send emails.",
+          variant: "destructive"
+        });
+      }, 1000);
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
-      setFormData({ name: '', phone: '', discipline: '', inquiry: '', message: '' });
-    }, 1000);
+
+      if (response.ok) {
+        toast({
+          title: "Inquiry Sent!",
+          description: "We've received your message and will get back to you shortly.",
+        });
+        setFormData({ name: '', phone: '', discipline: '', inquiry: '', message: '' });
+      } else {
+        throw new Error('Failed to send');
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly via phone.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -61,7 +87,7 @@ export default function Contact() {
               START YOUR <span className="text-gradient-gold">JOURNEY</span>
             </h3>
             <p className="font-body text-lg text-muted-foreground mb-10 leading-relaxed">
-              Ready to transform your life through martial arts? Book your free trial class 
+              Ready to transform your life through martial arts? Book your free trial class
               or ask us anything. Our team typically responds within 24 hours.
             </p>
 
@@ -94,7 +120,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://instagram.com/wolfacademyindia"
+                href="https://www.instagram.com/wolf_academy_india?igsh=MWF4Y2FlN3V3cjFtdg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors group"
@@ -104,7 +130,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-heading text-sm text-muted-foreground">Follow Us</p>
-                  <p className="font-heading text-lg text-foreground">@wolfacademyindia</p>
+                  <p className="font-heading text-lg text-foreground">@wolf_academy_india</p>
                 </div>
               </a>
 
@@ -114,7 +140,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-heading text-sm text-muted-foreground">Location</p>
-                  <p className="font-heading text-lg text-foreground">New Delhi, India</p>
+                  <p className="font-heading text-lg text-foreground">Bangalore, India</p>
                 </div>
               </div>
             </div>
@@ -128,7 +154,7 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="p-8 bg-card border border-border rounded-2xl">
               <h4 className="font-heading text-2xl text-foreground mb-6">Book Your Free Class</h4>
-              
+
               <div className="space-y-5">
                 <div>
                   <label className="font-heading text-sm text-muted-foreground block mb-2">

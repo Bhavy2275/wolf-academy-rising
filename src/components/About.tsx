@@ -6,7 +6,7 @@ import founderImage from '@/assets/founder-portrait.jpg';
 
 const achievements = [
   { icon: Trophy, title: '4x Boxing National Gold Medalist', description: 'Dominating the national boxing circuit' },
-  { icon: Medal, title: 'BJJ Gold Medalist', description: 'Delhi Open & SJJIF Champion' },
+  { icon: Medal, title: 'BJJ Gold Medalist', description: 'Bangalore Open & SJJIF Champion' },
   { icon: Award, title: 'MMA Open Championship Gold', description: 'Proven in the cage' },
   { icon: Target, title: 'Elite Combat Coach', description: 'Training champions since 2018' },
 ];
@@ -19,7 +19,7 @@ export default function About() {
     <section id="about" className="py-24 bg-gradient-to-b from-background to-surface relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-radial from-primary/5 via-transparent to-transparent opacity-50" />
-      
+
       <div className="section-container">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Column */}
@@ -37,7 +37,7 @@ export default function About() {
               />
               <div className="absolute inset-0 rounded-2xl border-2 border-primary/30 -translate-x-4 -translate-y-4 max-w-md mx-auto" />
             </div>
-            
+
             {/* Floating Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -60,10 +60,10 @@ export default function About() {
             <h3 className="font-heading text-4xl md:text-5xl text-foreground mb-6">
               KARTIKE <span className="text-gradient-gold">YADAV</span>
             </h3>
-            
+
             <p className="font-body text-muted-foreground text-lg mb-8 leading-relaxed">
-              A warrior forged through relentless competition and unwavering discipline. 
-              Kartike's journey from the ring to founding Wolf Academy represents his mission: 
+              A warrior forged through relentless competition and unwavering discipline.
+              Kartike's journey from the ring to founding Wolf Academy represents his mission:
               to create world-class fighters and transform lives through combat sports.
             </p>
 

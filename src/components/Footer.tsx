@@ -30,12 +30,12 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-body text-muted-foreground leading-relaxed max-w-md mb-6">
-              Delhi's premier combat sports academy. Training champions in MMA, Boxing, 
+              Bangalore's premier combat sports academy. Training champions in MMA, Boxing,
               BJJ, and Muay Thai. Where goals become reality.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com/wolfacademyindia"
+                href="https://www.instagram.com/wolf_academy_india?igsh=MWF4Y2FlN3V3cjFtdg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-surface-elevated border border-border rounded-lg text-muted-foreground hover:text-primary hover:border-primary transition-colors"
@@ -79,14 +79,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://instagram.com/wolfacademyindia" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.instagram.com/wolf_academy_india?igsh=MWF4Y2FlN3V3cjFtdg==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                   <Instagram size={18} />
-                  <span className="font-body">@wolfacademyindia</span>
+                  <span className="font-body">@wolf_academy_india</span>
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin size={18} />
-                <span className="font-body">New Delhi, India</span>
+                <span className="font-body">Bangalore, India</span>
               </li>
             </ul>
           </div>

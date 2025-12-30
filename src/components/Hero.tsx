@@ -47,7 +47,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Delhi's Premier Combat Sports Academy. Train MMA, Boxing, BJJ, Muay Thai 
+          Bangalore's Premier Combat Sports Academy. Train MMA, Boxing, BJJ, Muay Thai
           with National Champions. Unleash your inner warrior.
         </motion.p>
 
@@ -59,10 +59,10 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-gold text-primary-foreground font-heading text-lg tracking-widest rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 animate-glow-pulse"
+            className="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-gold text-primary-foreground font-heading text-lg tracking-widest rounded-lg overflow-hidden transition-all duration-300 hover:scale-105"
           >
             <span className="relative z-10">JOIN THE PACK</span>
-            <div className="absolute inset-0 bg-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-1300" />
           </a>
           <a
             href="#disciplines"
@@ -93,21 +93,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2"
-        >
-          <div className="w-1.5 h-3 bg-primary rounded-full" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
