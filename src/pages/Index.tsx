@@ -8,10 +8,16 @@ import LocationMap from '@/components/LocationMap';
 import OfferBanner from '@/components/OfferBanner';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { SEO } from '@/components/SEO';
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <SEO
+        title="Home"
+        description="Bangalore's premier combat sports academy. Train with National Champions in MMA, Boxing, BJJ, Muay Thai. Kids & Adult programs available."
+        keywords="MMA Bangalore, Boxing classes, BJJ training, Muay Thai, Kids MMA, Wolf Academy"
+      />
       <Header />
       <Hero />
       <About />
