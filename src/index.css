@@ -180,3 +180,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--gold) / 0.7);
 }
+
+/* Hide Elfsight Free Widget Branding */
+a[href*="elfsight.com"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
