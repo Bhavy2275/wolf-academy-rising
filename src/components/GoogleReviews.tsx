@@ -11,15 +11,27 @@ const GoogleReviews = () => {
         document.body.appendChild(script);
 
         // Aggressive branding removal via MutationObserver
+        // Aggressive branding removal via MutationObserver
         const observer = new MutationObserver((mutations) => {
             const brandingLink = document.querySelector('a[href*="elfsight.com"]');
             const brandingText = document.querySelector('a[title*="Free Google Reviews Widget"]');
+            const widgetToolbar = document.querySelector('.eapps-widget-toolbar');
 
             if (brandingLink) {
-                brandingLink.remove();
+                brandingLink.style.display = 'none';
+                brandingLink.style.visibility = 'hidden';
+                brandingLink.style.opacity = '0';
+                brandingLink.style.pointerEvents = 'none';
             }
             if (brandingText) {
-                brandingText.remove();
+                brandingText.style.display = 'none';
+                brandingText.style.visibility = 'hidden';
+                brandingText.style.opacity = '0';
+                brandingText.style.pointerEvents = 'none';
+            }
+            if (widgetToolbar) {
+                widgetToolbar.style.display = 'none';
+                widgetToolbar.style.visibility = 'hidden';
             }
         });
 
