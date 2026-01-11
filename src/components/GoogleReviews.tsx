@@ -10,8 +10,27 @@ const GoogleReviews = () => {
         script.defer = true;
         document.body.appendChild(script);
 
+        // Aggressive branding removal via MutationObserver
+        const observer = new MutationObserver((mutations) => {
+            const brandingLink = document.querySelector('a[href*="elfsight.com"]');
+            const brandingText = document.querySelector('a[title*="Free Google Reviews Widget"]');
+
+            if (brandingLink) {
+                brandingLink.remove();
+            }
+            if (brandingText) {
+                brandingText.remove();
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
         return () => {
             document.body.removeChild(script);
+            observer.disconnect();
         };
     }, []);
 
