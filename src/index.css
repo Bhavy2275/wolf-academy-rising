@@ -201,13 +201,11 @@
   background: hsl(var(--gold) / 0.7);
 }
 
-/* Hide Elfsight Free Widget Branding - Aggressive */
+/* Hide Elfsight Free Widget Branding - Targeted */
 a[href*="elfsight.com"],
 a[title*="Free Google Reviews Widget"],
 .eapps-widget-toolbar,
-.WidgetBackground__WidgetBackgroundContainer,
 [class*="eapps-widget-toolbar"],
-[class*="WidgetBackground"],
 [href*="elfsight.com"] {
   display: none !important;
   visibility: hidden !important;
