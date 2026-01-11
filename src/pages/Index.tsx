@@ -10,6 +10,8 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 
+import GoogleReviews from '@/components/GoogleReviews';
+
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
@@ -24,6 +26,7 @@ const Index = () => {
       <Disciplines />
       <Gallery />
       <OfferBanner />
+      <GoogleReviews />
       <Schedule />
       <LocationMap />
       <Contact />
