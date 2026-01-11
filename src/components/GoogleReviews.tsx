@@ -16,9 +16,9 @@ const GoogleReviews = () => {
     }, []);
 
     return (
-        <section className="py-20 bg-wolf-gray/5">
+        <section className="py-10 bg-wolf-gray/5">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12 animate-fade-up">
+                <div className="text-center mb-8 animate-fade-up">
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
                         <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />

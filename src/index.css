@@ -204,9 +204,11 @@
 /* Hide Elfsight Free Widget Branding - Aggressive */
 a[href*="elfsight.com"],
 a[title*="Free Google Reviews Widget"],
-div[class*="eapps-widget-toolbar"],
-div[class*="WidgetBackground__WidgetBackgroundContainer"],
-[class*="eapps-"] a[href*="elfsight"] {
+.eapps-widget-toolbar,
+.WidgetBackground__WidgetBackgroundContainer,
+[class*="eapps-widget-toolbar"],
+[class*="WidgetBackground"],
+[href*="elfsight.com"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -215,4 +217,6 @@ div[class*="WidgetBackground__WidgetBackgroundContainer"],
   width: 0 !important;
   position: absolute !important;
   z-index: -9999 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  content: none !important;
 }

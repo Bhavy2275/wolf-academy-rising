@@ -39,7 +39,7 @@ export default function Schedule() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="schedule" className="py-24 bg-background relative">
+    <section id="schedule" className="py-12 bg-background relative">
       <div className="section-container">
         {/* Header */}
         <motion.div
