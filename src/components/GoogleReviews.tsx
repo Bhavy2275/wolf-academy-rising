@@ -13,9 +13,9 @@ const GoogleReviews = () => {
         // Aggressive branding removal via MutationObserver
         // Aggressive branding removal via MutationObserver
         const observer = new MutationObserver((mutations) => {
-            const brandingLink = document.querySelector('a[href*="elfsight.com"]');
-            const brandingText = document.querySelector('a[title*="Free Google Reviews Widget"]');
-            const widgetToolbar = document.querySelector('.eapps-widget-toolbar');
+            const brandingLink = document.querySelector('a[href*="elfsight.com"]') as HTMLElement;
+            const brandingText = document.querySelector('a[title*="Free Google Reviews Widget"]') as HTMLElement;
+            const widgetToolbar = document.querySelector('.eapps-widget-toolbar') as HTMLElement;
 
             if (brandingLink) {
                 brandingLink.style.display = 'none';
