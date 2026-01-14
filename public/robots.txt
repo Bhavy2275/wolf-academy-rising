@@ -1,3 +1,25 @@
+# Wolf Academy India - robots.txt
+# Optimized for Vite/React SPA
+
 User-agent: *
 Allow: /
+
+# Allow all main pages
+Allow: /blog
+Allow: /blog/*
+
+# Block build/dev artifacts (not relevant in production but good practice)
+Disallow: /src/
+Disallow: /*.map$
+Disallow: /node_modules/
+
+# Block common non-content paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/chunks/
+
+# Sitemap location
 Sitemap: https://wolfacademyindia.com/sitemap.xml
+
+# Crawl-delay (optional, be gentle on server)
+Crawl-delay: 1
