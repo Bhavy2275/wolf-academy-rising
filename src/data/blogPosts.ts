@@ -1,26 +1,26 @@
 export interface BlogPost {
-    id: string;
-    slug: string;
-    title: string;
-    excerpt: string;
-    date: string;
-    readTime: string;
-    category: string;
-    image: string;
-    content: string; // HTML content
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  category: string;
+  image: string;
+  content: string; // HTML content
 }
 
 export const blogPosts: BlogPost[] = [
-    {
-        id: '1',
-        slug: 'mma-for-working-professionals-bangalore',
-        title: 'Why Techies in Bangalore Are Swapping the Gym for MMA Training',
-        excerpt: 'Tired of the treadmill? Discover why Bangalore\'s software engineers are turning to Mixed Martial Arts for stress relief, fitness, and mental clarity.',
-        date: 'October 15, 2023', // You might want to use a current date
-        readTime: '5 min read',
-        category: 'Lifestyle',
-        image: '/assets/hero-gym.jpg', // Reusing existing asset for now
-        content: `
+  {
+    id: '1',
+    slug: 'mma-for-working-professionals-bangalore',
+    title: 'Why Techies in Bangalore Are Swapping the Gym for MMA Training',
+    excerpt: 'Tired of the treadmill? Discover why Bangalore\'s software engineers are turning to Mixed Martial Arts for stress relief, fitness, and mental clarity.',
+    date: 'October 15, 2023', // You might want to use a current date
+    readTime: '5 min read',
+    category: 'Lifestyle',
+    image: '/wolf-logo.jpg', // Using logo as placeholder until blog images are added
+    content: `
       <h2>The "Sitting Disease": Combatting 9-5 Desk Stiffness</h2>
       <p>If you live in Bangalore, chances are you spend a significant portion of your day sitting—whether it's at a desk in start-up hub Koramangala or stuck in traffic on the Outer Ring Road. This sedentary lifestyle leads to what health experts call "sitting disease": tight hips, weak glutes, and chronic back pain.</p>
       <p>Traditional gyms offer a solution, but let's be honest: running on a treadmill for 45 minutes can be mind-numbingly boring. This is where <strong>Mixed Martial Arts (MMA)</strong> changes the game. Unlike a static gym workout, MMA forces your body to move in every plane of motion. You're twisting, sprawling, pushing, and pulling. It's the ultimate antidote to the stiffness that comes from an 8-hour coding marathon.</p>
@@ -47,5 +47,5 @@ export const blogPosts: BlogPost[] = [
         <a href="/#contact" class="inline-block bg-primary text-white font-bold py-2 px-6 rounded hover:bg-primary/90 transition">Book Your Free Trial</a>
       </div>
     `
-    }
+  }
 ];
