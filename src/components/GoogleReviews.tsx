@@ -1,17 +1,22 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 
 const GoogleReviews = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
     useEffect(() => {
         // Load Elfsight script dynamically
         const script = document.createElement('script');
         script.src = "https://elfsightcdn.com/platform.js";
         script.async = true;
         script.defer = true;
+        script.onload = () => {
+            // Give widget time to render
+            setTimeout(() => setIsLoaded(true), 2000);
+        };
         document.body.appendChild(script);
 
         // Aggressive branding removal via MutationObserver
-
         const observer = new MutationObserver((mutations) => {
             const brandingLink = document.querySelector('a[href*="elfsight.com"]') as HTMLElement;
             const brandingText = document.querySelector('a[title*="Free Google Reviews Widget"]') as HTMLElement;
@@ -41,7 +46,6 @@ const GoogleReviews = () => {
         });
 
         return () => {
-            document.body.removeChild(script);
             observer.disconnect();
         };
     }, []);
@@ -65,22 +69,24 @@ const GoogleReviews = () => {
                     </p>
                 </div>
 
-                {/* Elfsight Google Reviews Widget Container */}
-                <div className="max-w-6xl mx-auto min-h-[400px] bg-wolf-gray/20 rounded-xl p-4 flex items-center justify-center">
-                    <div className="elfsight-app-bb5b49f3-b5cc-43be-bd9c-0b71cd71cae1 w-full" data-elfsight-app-lazy></div>
+                {/* Elfsight Google Reviews Widget Container - Fixed height to prevent CLS */}
+                <div
+                    className="max-w-6xl mx-auto bg-wolf-gray/20 rounded-xl p-4 relative"
+                    style={{ minHeight: '450px' }}
+                >
+                    {/* Skeleton loader while widget loads */}
+                    {!isLoaded && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="animate-pulse flex flex-col items-center gap-4">
+                                <div className="w-16 h-16 bg-gray-700 rounded-full"></div>
+                                <div className="h-4 w-48 bg-gray-700 rounded"></div>
+                                <div className="h-3 w-64 bg-gray-700 rounded"></div>
+                                <p className="text-gray-500 text-sm mt-2">Loading reviews...</p>
+                            </div>
+                        </div>
+                    )}
 
-                    {/* Fallback/Instruction for the User */}
-                    <div className="text-center p-8 border-2 border-dashed border-wolf-red/30 rounded-lg hidden empty:block">
-                        <p className="text-gray-400 mb-4">Reviews widget loading...</p>
-                        <a
-                            href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center justify-center px-6 py-3 bg-wolf-red text-white font-bold rounded-full hover:bg-red-700 transition-colors"
-                        >
-                            Write a Review
-                        </a>
-                    </div>
+                    <div className="elfsight-app-bb5b49f3-b5cc-43be-bd9c-0b71cd71cae1 w-full" data-elfsight-app-lazy></div>
                 </div>
             </div>
         </section>
@@ -88,3 +94,4 @@ const GoogleReviews = () => {
 };
 
 export default GoogleReviews;
+
