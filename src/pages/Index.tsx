@@ -9,6 +9,7 @@ import OfferBanner from '@/components/OfferBanner';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { SEO } from '@/components/SEO';
+import FAQ from '@/components/FAQ';
 
 import GoogleReviews from '@/components/GoogleReviews';
 
@@ -29,6 +30,7 @@ const Index = () => {
       <GoogleReviews />
       <Schedule />
       <LocationMap />
+      <FAQ />
       <Contact />
       <Footer />
     </main>
