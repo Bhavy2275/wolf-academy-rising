@@ -19,11 +19,12 @@ const WhatsAppIcon = ({ size = 20, className = "" }: { size?: number, className?
 );
 
 const quickLinks = [
-  { name: 'About Us', href: '#about' },
-  { name: 'Disciplines', href: '#disciplines' },
-  { name: 'Gallery', href: '#gallery' },
-  { name: 'Schedule', href: '#schedule' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'About Us', href: '/#about' },
+  { name: 'Disciplines', href: '/#disciplines' },
+  { name: 'Gallery', href: '/#gallery' },
+  { name: 'Schedule', href: '/#schedule' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Footer() {
