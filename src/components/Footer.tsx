@@ -23,6 +23,7 @@ const quickLinks = [
   { name: 'Disciplines', href: '/#disciplines' },
   { name: 'Gallery', href: '/#gallery' },
   { name: 'Schedule', href: '/#schedule' },
+  { name: 'FAQ', href: '/#faq' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/#contact' },
 ];
