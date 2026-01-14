@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     date: 'October 15, 2023', // You might want to use a current date
     readTime: '5 min read',
     category: 'Lifestyle',
-    image: '/wolf-logo.jpg', // Using logo as placeholder until blog images are added
+    image: '/blog-techies-mma.jpg', // Evening training session photo
     content: `
       <div class="space-y-8">
         <section class="bg-card p-6 rounded-xl border border-border">
