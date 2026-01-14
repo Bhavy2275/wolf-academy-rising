@@ -133,9 +133,14 @@ export default function Footer() {
       <div className="border-t border-border">
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="font-body text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Wolf Academy India. All rights reserved.
-            </p>
+            <div className="text-center sm:text-left">
+              <p className="font-body text-sm text-muted-foreground">
+                © {new Date().getFullYear()} Wolf Academy India. All rights reserved.
+              </p>
+              <p className="font-body text-xs text-muted-foreground mt-1">
+                Proudly serving Yelahanka, Reva University, and North Bangalore.
+              </p>
+            </div>
             <p className="font-body text-sm text-muted-foreground">
               Train Hard. <span className="text-primary">Fight Easy.</span>
             </p>

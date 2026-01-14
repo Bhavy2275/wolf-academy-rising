@@ -30,6 +30,8 @@ export default function Hero() {
           <img
             src={wolfLogo}
             alt="Wolf Academy India Logo"
+            width="224"
+            height="224"
             className="w-40 h-40 md:w-56 md:h-56 mx-auto rounded-full border-4 border-primary glow-gold-intense object-cover"
           />
         </motion.div>

@@ -4,11 +4,12 @@ import { Menu, X } from 'lucide-react';
 import wolfLogo from '@/assets/wolf-logo.jpg';
 
 const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Disciplines', href: '#disciplines' },
-  { name: 'Gallery', href: '#gallery' },
-  { name: 'Schedule', href: '#schedule' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'About', href: '/#about' },
+  { name: 'Disciplines', href: '/#disciplines' },
+  { name: 'Gallery', href: '/#gallery' },
+  { name: 'Schedule', href: '/#schedule' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Header() {
