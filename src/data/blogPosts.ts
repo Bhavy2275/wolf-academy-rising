@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
         <div class="bg-gradient-to-r from-primary/20 to-primary/5 p-8 rounded-2xl border-2 border-primary text-center">
           <h3 class="text-2xl font-bold text-primary mb-3">🥊 Ready to Punch Out the Stress?</h3>
           <p class="mb-6 text-lg">Don't just read about it. Experience the rush yourself. Join us for a trial class and see why MMA is the preferred workout for Bangalore's professionals.</p>
-          <a href="/#contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary/90 transition-all hover:scale-105">Book Your Free Trial →</a>
+          <a href="https://wolfacademyindia.com/#contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary/90 transition-all hover:scale-105">Book Your Free Trial →</a>
         </div>
       </div>
     `
