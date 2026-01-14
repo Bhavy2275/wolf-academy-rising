@@ -24,13 +24,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-background/95 backdrop-blur-xl border-b border-border' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-background/95 backdrop-blur-xl border-b border-border' : 'bg-background/80 backdrop-blur-md'
         }`}
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3">
             <img
               src={wolfLogo}
               alt="Wolf Academy India"
@@ -47,8 +47,7 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-heading text-sm tracking-widest hover:text-primary transition-colors duration-300 ${isScrolled ? 'text-muted-foreground' : 'text-black font-semibold'
-                  }`}
+                className="font-heading text-sm tracking-widest text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -58,7 +57,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-gradient-gold text-primary-foreground font-heading text-sm tracking-wider rounded-lg glow-gold hover:scale-105 transition-transform duration-300"
             >
               BOOK FREE CLASS
@@ -96,7 +95,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 inline-flex items-center justify-center px-6 py-3 bg-gradient-gold text-primary-foreground font-heading tracking-wider rounded-lg"
               >
