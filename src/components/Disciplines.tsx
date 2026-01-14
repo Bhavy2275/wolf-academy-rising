@@ -73,7 +73,7 @@ export default function Disciplines() {
             >
               {/* Background Gradient */}
               <div className={`absolute inset-0 bg-gradient-radial ${discipline.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              
+
               <div className="relative p-8">
                 {/* Title */}
                 <div className="mb-6">
@@ -102,14 +102,14 @@ export default function Disciplines() {
 
                 {/* CTA */}
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="inline-flex items-center gap-2 font-heading text-sm tracking-wider text-primary group-hover:text-gold-light transition-colors"
                 >
                   START TRAINING
-                  <svg 
-                    className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
+                  <svg
+                    className="w-4 h-4 group-hover:translate-x-2 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

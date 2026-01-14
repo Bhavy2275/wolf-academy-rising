@@ -121,9 +121,9 @@ export default function Footer() {
                   <span className="font-body">@wolf_academy_india</span>
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <MapPin size={18} />
-                <span className="font-body">Bangalore, India</span>
+              <li className="flex items-start gap-3 text-muted-foreground">
+                <MapPin size={18} className="mt-1 flex-shrink-0" />
+                <span className="font-body text-sm">The School of Raya Hennaur, Bagalur Road, Dasanayakanahalli, Bengaluru - 562149</span>
               </li>
             </ul>
           </div>
@@ -139,7 +139,7 @@ export default function Footer() {
                 © {new Date().getFullYear()} Wolf Academy India. All rights reserved.
               </p>
               <p className="font-body text-xs text-muted-foreground mt-1">
-                Proudly serving Yelahanka, Reva University, and North Bangalore.
+                Proudly serving Dasanayakanahalli, Bagalur Road, and North Bangalore.
               </p>
             </div>
             <p className="font-body text-sm text-muted-foreground">
