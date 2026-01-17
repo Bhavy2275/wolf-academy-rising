@@ -65,6 +65,15 @@ export default function Hero() {
           <a
             href="#contact"
             className="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-gold text-primary-foreground font-heading text-lg tracking-widest rounded-lg overflow-hidden transition-all duration-300 hover:scale-105"
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.gtag) {
+                window.gtag('event', 'free_trial_click', {
+                  event_category: 'conversion',
+                  event_label: 'hero_cta',
+                  button_text: 'JOIN THE PACK'
+                });
+              }
+            }}
           >
             <span className="relative z-10">JOIN THE PACK</span>
             <div className="absolute inset-0 bg-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-1300" />

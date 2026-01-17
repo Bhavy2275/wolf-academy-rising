@@ -107,6 +107,16 @@ export default function Schedule() {
                 <a
                   href="#contact"
                   className="hidden sm:inline-flex items-center gap-2 px-4 py-2 font-heading text-xs tracking-wider text-primary border border-primary rounded-lg opacity-0 group-hover:opacity-100 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.gtag) {
+                      window.gtag('event', 'free_trial_click', {
+                        event_category: 'conversion',
+                        event_label: 'schedule_cta',
+                        button_text: 'BOOK NOW',
+                        class_name: item.class
+                      });
+                    }
+                  }}
                 >
                   BOOK NOW
                 </a>

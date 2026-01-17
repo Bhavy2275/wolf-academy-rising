@@ -53,6 +53,14 @@ export default function Contact() {
       });
 
       if (response.ok) {
+        // Track Contact Form submission as GA4 event
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'contact_form_submit', {
+            event_category: 'conversion',
+            event_label: formData.discipline,
+            inquiry_type: formData.inquiry
+          });
+        }
         toast({
           title: "Inquiry Sent!",
           description: "We've received your message and will get back to you shortly.",

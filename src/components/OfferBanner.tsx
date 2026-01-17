@@ -50,6 +50,15 @@ export default function OfferBanner() {
             <a
               href="#contact"
               className="inline-flex items-center justify-center px-6 sm:px-10 py-4 bg-gradient-gold text-primary-foreground font-heading text-base sm:text-lg tracking-widest rounded-lg glow-gold-intense hover:scale-105 transition-transform duration-300"
+              onClick={() => {
+                if (typeof window !== 'undefined' && window.gtag) {
+                  window.gtag('event', 'free_trial_click', {
+                    event_category: 'conversion',
+                    event_label: 'offer_banner',
+                    button_text: 'CLAIM NOW'
+                  });
+                }
+              }}
             >
               CLAIM NOW
             </a>

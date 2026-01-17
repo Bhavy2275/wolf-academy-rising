@@ -77,6 +77,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="p-3 bg-surface-elevated border border-border rounded-lg text-muted-foreground hover:text-primary hover:border-primary transition-colors"
                 aria-label="WhatsApp"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && window.gtag) {
+                    window.gtag('event', 'whatsapp_click', {
+                      event_category: 'conversion',
+                      event_label: 'footer_social'
+                    });
+                  }
+                }}
               >
                 <WhatsAppIcon size={20} />
               </a>
