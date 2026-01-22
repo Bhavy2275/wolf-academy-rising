@@ -63,5 +63,49 @@ export const blogPosts: BlogPost[] = [
         </div>
       </div>
     `
+  },
+  {
+    id: '2',
+    slug: 'mma-boxing-north-bangalore-hennur-bagalur',
+    title: 'MMA & Boxing in North Bangalore: Why Hennur is the New Combat Sports Hub',
+    excerpt: 'Discover why North Bangalore, especially Hennur and Bagalur Road, is becoming the heart of combat sports training with world-class facilities like Wolf Academy.',
+    date: 'January 15, 2026',
+    readTime: '6 min read',
+    category: 'Community',
+    image: '/blog-techies-mma.jpg', // Re-using image or could use a generic placeholder
+    content: `
+      <div class="space-y-8">
+        <section class="bg-card p-6 rounded-xl border border-border">
+          <h2 class="text-2xl font-bold text-primary mb-4">📍 The Rise of North Bangalore's Fitness Scene</h2>
+          <p class="mb-4">North Bangalore is no longer just a residential suburb. With the expansion around <strong>Hennur, Bagalur Road, and Yelahanka</strong>, it has transformed into a vibrant hub for young professionals and athletes. But as the population grows, so does the need for high-quality, specialized fitness training that goes beyond the standard big-box gym.</p>
+          <p>Combat sports like <strong class="text-primary">Boxing and MMA</strong> are leading this revolution. Residents are looking for more than just weightlifting; they want skills, discipline, and a community.</p>
+        </section>
+
+        <section class="bg-card p-6 rounded-xl border border-border">
+          <h2 class="text-2xl font-bold text-primary mb-4">🥊 Why Boxing in Hennur and Bagalur is Gaining Momentum</h2>
+          <p class="mb-4">Boxing has always been the "sweet science," but its popularity in areas like <strong>Dasanayakanahalli and Chikkagubbi</strong> has skyrocketed recently. Why? Because it offers a level of cardiovascular conditioning that is hard to match.</p>
+          <ul class="list-disc list-inside space-y-2 mb-4 text-muted-foreground">
+            <li><strong>High-Intensity Workouts:</strong> Perfect for those living near the airport road with busy schedules.</li>
+            <li><strong>Mental Sharpness:</strong> Boxing requires focus, helping residents decompress after a day in Bangalore's tech parks.</li>
+            <li><strong>Self-Defense:</strong> Practical skills that build real-world confidence.</li>
+          </ul>
+        </section>
+
+        <section class="bg-card p-6 rounded-xl border border-border">
+          <h2 class="text-2xl font-bold text-primary mb-4">🏢 Wolf Academy: At the Heart of the Community</h2>
+          <p class="mb-4">Located strategically at <strong>The School of Raya on Bagalur Road</strong>, Wolf Academy India has become the focal point for martial arts in North Bangalore. We aren't just a gym; we are a training ground for champions and hobbyists alike.</p>
+          <p>Our proximity to <strong>Reva University</strong> and the bustling <strong>Hennur-Bagalur stretch</strong> makes it convenient for students and working professionals to drop in for an evening session without the dread of Crosstown traffic.</p>
+        </section>
+
+        <div class="bg-gradient-to-r from-primary/20 to-primary/5 p-8 rounded-2xl border-2 border-primary text-center">
+          <h3 class="text-2xl font-bold text-primary mb-3">🐺 Join the Wolf Pack in North Bangalore</h3>
+          <p class="mb-6 text-lg">Whether you are from Yelahanka, Hennur, or right here in Bagalur, your journey to greatness starts on our mats. Stop searching for "boxing near me" and come experience the best.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wolfacademyindia.com/#contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary/90 transition-all hover:scale-105">Book Your Free Trial →</a>
+            <a href="tel:9319812158" class="inline-block bg-surface-elevated text-foreground font-bold py-3 px-8 rounded-lg text-lg border border-border hover:border-primary transition-all">Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    `
   }
 ];
