@@ -24,7 +24,6 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // TODO: Replace with your actual Formspree Form ID
   const FORMSPREE_ID = 'xdaovpjz';
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -53,7 +52,6 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        // Track Contact Form submission as GA4 event
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'contact_form_submit', {
             event_category: 'conversion',
@@ -84,7 +82,6 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-surface relative">
       <div className="section-container">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16">
-          {/* Info Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -99,7 +96,6 @@ export default function Contact() {
               or ask us anything. Our team typically responds within 24 hours.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-6 mb-10">
               <a
                 href="tel:9319812158"
@@ -154,7 +150,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Form Column */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}

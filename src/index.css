@@ -1,12 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
 @layer base {
   :root {
-    /* Wolf Academy Dark Theme - Black, Gold, White */
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
 
@@ -16,11 +15,9 @@
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
 
-    /* Rich Gold Primary */
     --primary: 43 74% 53%;
     --primary-foreground: 0 0% 4%;
 
-    /* Muted Gold Secondary */
     --secondary: 43 30% 15%;
     --secondary-foreground: 43 74% 70%;
 
@@ -39,7 +36,6 @@
 
     --radius: 0.5rem;
 
-    /* Custom Wolf Academy Tokens */
     --gold: 43 74% 53%;
     --gold-light: 43 80% 65%;
     --gold-dark: 43 70% 35%;
@@ -47,22 +43,18 @@
     --surface: 0 0% 8%;
     --surface-elevated: 0 0% 10%;
 
-    /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(43 74% 53%) 0%, hsl(35 80% 45%) 100%);
     --gradient-gold-glow: linear-gradient(135deg, hsl(43 80% 60%) 0%, hsl(43 74% 53%) 50%, hsl(35 70% 40%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 100%);
     --gradient-hero: linear-gradient(180deg, transparent 0%, hsla(0, 0%, 4%, 0.6) 50%, hsl(0 0% 4%) 100%);
 
-    /* Shadows */
     --shadow-gold: 0 0 30px hsla(43, 74%, 53%, 0.3);
     --shadow-gold-intense: 0 0 50px hsla(43, 74%, 53%, 0.5), 0 0 100px hsla(43, 74%, 53%, 0.2);
     --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 
-    /* Typography */
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    /* Sidebar */
     --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 43 74% 53%;
@@ -185,7 +177,6 @@
   }
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -203,7 +194,6 @@
   background: hsl(var(--gold) / 0.7);
 }
 
-/* Hide Elfsight Free Widget Branding - Targeted */
 a[href*="elfsight.com"],
 a[title*="Free Google Reviews Widget"],
 .eapps-widget-toolbar,

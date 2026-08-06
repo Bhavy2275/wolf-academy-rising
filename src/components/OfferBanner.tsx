@@ -9,11 +9,9 @@ export default function OfferBanner() {
 
   return (
     <section className="py-16 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-background to-primary/20" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
 
-      {/* Animated Border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
 

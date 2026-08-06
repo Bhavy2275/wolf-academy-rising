@@ -41,7 +41,6 @@ export default function Schedule() {
   return (
     <section id="schedule" className="py-12 bg-background relative">
       <div className="section-container">
-        {/* Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -55,7 +54,6 @@ export default function Schedule() {
           </h3>
         </motion.div>
 
-        {/* Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -76,7 +74,6 @@ export default function Schedule() {
           ))}
         </motion.div>
 
-        {/* Schedule Grid */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -125,7 +122,6 @@ export default function Schedule() {
           </div>
         </motion.div>
 
-        {/* Note */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}

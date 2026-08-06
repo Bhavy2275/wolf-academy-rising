@@ -33,7 +33,6 @@ export default function Footer() {
     <footer className="bg-background border-t border-border">
       <div className="section-container py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">
               <img
@@ -91,7 +90,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h5 className="font-heading text-lg text-foreground mb-6">QUICK LINKS</h5>
             <ul className="space-y-3">
@@ -108,7 +106,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h5 className="font-heading text-lg text-foreground mb-6">CONTACT</h5>
             <ul className="space-y-4">
@@ -139,7 +136,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="section-container py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -17,14 +17,12 @@ const NotFound = () => {
 
       <main className="flex-grow flex items-center justify-center py-24">
         <div className="section-container text-center max-w-2xl">
-          {/* 404 Badge */}
           <div className="inline-block mb-8">
             <span className="font-heading text-9xl md:text-[180px] text-primary/20 font-bold">
               404
             </span>
           </div>
 
-          {/* Message */}
           <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
             Oops! You've Stepped Out of the Ring
           </h1>
@@ -32,7 +30,6 @@ const NotFound = () => {
             The page you're looking for doesn't exist. But don't worry — let's get you back on track.
           </p>
 
-          {/* Helpful Links */}
           <div className="grid sm:grid-cols-3 gap-4 mb-12">
             <a
               href="/"
@@ -62,7 +59,6 @@ const NotFound = () => {
             </a>
           </div>
 
-          {/* Primary CTA */}
           <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-8 rounded-2xl border border-primary/30">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Phone size={24} className="text-primary" />

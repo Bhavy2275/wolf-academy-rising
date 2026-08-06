@@ -5,18 +5,15 @@ const GoogleReviews = () => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        // Load Elfsight script dynamically
         const script = document.createElement('script');
         script.src = "https://elfsightcdn.com/platform.js";
         script.async = true;
         script.defer = true;
         script.onload = () => {
-            // Give widget time to render
             setTimeout(() => setIsLoaded(true), 2000);
         };
         document.body.appendChild(script);
 
-        // Aggressive branding removal via MutationObserver
         const observer = new MutationObserver((mutations) => {
             const brandingLink = document.querySelector('a[href*="elfsight.com"]') as HTMLElement;
             const brandingText = document.querySelector('a[title*="Free Google Reviews Widget"]') as HTMLElement;
@@ -69,12 +66,10 @@ const GoogleReviews = () => {
                     </p>
                 </div>
 
-                {/* Elfsight Google Reviews Widget Container - Fixed height to prevent CLS */}
                 <div
                     className="max-w-6xl mx-auto bg-wolf-gray/20 rounded-xl p-4 relative"
                     style={{ minHeight: '450px' }}
                 >
-                    {/* Skeleton loader while widget loads */}
                     {!isLoaded && (
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="animate-pulse flex flex-col items-center gap-4">

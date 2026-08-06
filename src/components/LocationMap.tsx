@@ -39,7 +39,6 @@ export default function LocationMap() {
                         title="Wolf Academy India Location"
                     ></iframe>
 
-                    {/* Overlay to catch scroll events if desired, currently using standard map interaction */}
                 </motion.div>
             </div>
         </section>

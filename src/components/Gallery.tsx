@@ -48,7 +48,6 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-24 bg-surface relative overflow-hidden">
       <div className="section-container">
-        {/* Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -62,7 +61,6 @@ export default function Gallery() {
           </h3>
         </motion.div>
 
-        {/* Masonry Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 grid-flow-dense">
           {galleryImages.map((image, index) => (
             <motion.div
@@ -84,22 +82,18 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              {/* Caption */}
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                 <p className="font-heading text-sm tracking-wider text-foreground">{image.alt}</p>
               </div>
 
-              {/* Gold Border on Hover */}
               <div className="absolute inset-0 border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Lightbox */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div

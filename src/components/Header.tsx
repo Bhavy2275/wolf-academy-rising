@@ -30,7 +30,6 @@ export default function Header() {
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <a href="/" className="flex items-center gap-3">
             <img
               src={wolfLogo}
@@ -42,7 +41,6 @@ export default function Header() {
             </span>
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -55,7 +53,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:block">
             <a
               href="/#contact"
@@ -65,7 +62,6 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -75,7 +71,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div

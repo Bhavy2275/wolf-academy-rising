@@ -7,7 +7,7 @@ export interface BlogPost {
   readTime: string;
   category: string;
   image: string;
-  content: string; // HTML content
+  content: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -16,10 +16,10 @@ export const blogPosts: BlogPost[] = [
     slug: 'mma-for-working-professionals-bangalore',
     title: 'Why Techies in Bangalore Are Swapping the Gym for MMA Training',
     excerpt: 'Tired of the treadmill? Discover why Bangalore\'s software engineers are turning to Mixed Martial Arts for stress relief, fitness, and mental clarity.',
-    date: 'October 15, 2023', // You might want to use a current date
+    date: 'October 15, 2023',
     readTime: '5 min read',
     category: 'Lifestyle',
-    image: '/blog-techies-mma.jpg', // Evening training session photo
+    image: '/blog-techies-mma.jpg',
     content: `
       <div class="space-y-8">
         <section class="bg-card p-6 rounded-xl border border-border">
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
     date: 'January 15, 2026',
     readTime: '6 min read',
     category: 'Community',
-    image: '/blog-techies-mma.jpg', // Re-using image or could use a generic placeholder
+    image: '/blog-techies-mma.jpg',
     content: `
       <div class="space-y-8">
         <section class="bg-card p-6 rounded-xl border border-border">

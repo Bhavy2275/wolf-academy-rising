@@ -5,21 +5,18 @@ import wolfLogo from '@/assets/wolf-logo.jpg';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Wolf Academy Training Facility"
           className="w-full h-full object-cover"
-          // @ts-ignore
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/80" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 section-container text-center pt-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -86,7 +83,6 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

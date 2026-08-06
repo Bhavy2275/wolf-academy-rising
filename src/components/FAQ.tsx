@@ -29,7 +29,6 @@ export default function FAQ() {
     return (
         <section id="faq" className="py-24 bg-surface relative overflow-hidden">
             <div className="section-container max-w-4xl mx-auto">
-                {/* Header */}
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
@@ -43,7 +42,6 @@ export default function FAQ() {
                     </h3>
                 </motion.div>
 
-                {/* FAQ Accordion */}
                 <div className="space-y-4">
                     {faqData.map((faq, index) => (
                         <motion.div
@@ -92,7 +90,6 @@ export default function FAQ() {
                     ))}
                 </div>
 
-                {/* CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}

@@ -47,7 +47,6 @@ export default function Disciplines() {
   return (
     <section id="disciplines" className="py-24 bg-background relative">
       <div className="section-container">
-        {/* Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -61,7 +60,6 @@ export default function Disciplines() {
           </h3>
         </motion.div>
 
-        {/* Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {disciplines.map((discipline, index) => (
             <motion.div
@@ -71,11 +69,9 @@ export default function Disciplines() {
               transition={{ duration: 0.6, delay: 0.1 * index }}
               className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500"
             >
-              {/* Background Gradient */}
               <div className={`absolute inset-0 bg-gradient-radial ${discipline.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
               <div className="relative p-8">
-                {/* Title */}
                 <div className="mb-6">
                   <h4 className="font-heading text-4xl md:text-5xl text-foreground group-hover:text-primary transition-colors duration-300">
                     {discipline.name}
@@ -83,12 +79,10 @@ export default function Disciplines() {
                   <p className="font-body text-sm text-muted-foreground mt-1">{discipline.fullName}</p>
                 </div>
 
-                {/* Description */}
                 <p className="font-body text-muted-foreground mb-6 leading-relaxed">
                   {discipline.description}
                 </p>
 
-                {/* Stats */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {discipline.stats.map((stat) => (
                     <span
@@ -100,7 +94,6 @@ export default function Disciplines() {
                   ))}
                 </div>
 
-                {/* CTA */}
                 <a
                   href="/#contact"
                   className="inline-flex items-center gap-2 font-heading text-sm tracking-wider text-primary group-hover:text-gold-light transition-colors"
@@ -117,7 +110,6 @@ export default function Disciplines() {
                 </a>
               </div>
 
-              {/* Hover Border Effect */}
               <div className="absolute inset-0 border-2 border-primary rounded-2xl opacity-0 group-hover:opacity-100 scale-[1.02] group-hover:scale-100 transition-all duration-500" />
             </motion.div>
           ))}
