@@ -30,18 +30,6 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
-      setTimeout(() => {
-        setIsSubmitting(false);
-        toast({
-          title: "Configuration Needed",
-          description: "Please set your Formspree ID in the Contact component code to send emails.",
-          variant: "destructive"
-        });
-      }, 1000);
-      return;
-    }
-
     try {
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
